@@ -40,6 +40,12 @@ const CardComponent = () => (
     </Card>
 );
 
+//Part 3: Compound Components Pattern
+// What are Compound Components?
+//
+// Compound components are a pattern where components are used together such that
+// they share an implicit state that lets them communicate with each other.
+// Often used in UI libraries for building complex components like accordions, tabs, dropdowns, etc.
 interface TabsProps {
     children: React.ReactNode;
 }
