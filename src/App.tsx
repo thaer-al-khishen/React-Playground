@@ -1,14 +1,23 @@
 import React from 'react';
+import {configureStore, createSlice} from '@reduxjs/toolkit';
+import {Provider, useDispatch, useSelector} from "react-redux";
+import {store} from "./store/Store";
+import {ColorSwitcherComponent} from "./features/ColorSwitcher/ColorSwitcherComponent";
+import {CounterComponent} from "./features/Counter/CounterComponent";
 
-//Tip: Use this when you get
-// Error: error:0308010C:digital envelope routines::unsupported
-// npm install react-scripts@latest
+//npm install redux react-redux
+//npm install @reduxjs/toolkit
 
 function App() {
-    return element;
+    // return <ReduxCounterComponent/>;
+    return (
+        <Provider store={store}>
+            <div>
+                <CounterComponent />
+                <ColorSwitcherComponent />
+            </div>
+        </Provider>
+    );
 }
-
-//This syntax creates a React element, which is a lightweight description of what to render.
-const element = <div>Hello, World!</div>;
 
 export default App;
