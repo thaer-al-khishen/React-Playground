@@ -1,8 +1,8 @@
 // counterSelectors.tsx
 import { createSelector } from '@reduxjs/toolkit';
-import {AppState} from "../../store/Store";
+import {RootState} from "../../store/Store";
 
-const selectColorSwitcherState = (state: AppState) => state.colorSwitcher;
+const selectColorSwitcherState = (state: RootState) => state.colorSwitcher;
 
 export const selectColorSwitcher = createSelector(
     [selectColorSwitcherState],

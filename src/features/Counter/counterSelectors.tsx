@@ -1,8 +1,8 @@
 // counterSelectors.tsx
 import { createSelector } from '@reduxjs/toolkit';
-import {AppState} from "../../store/Store";
+import {RootState} from "../../store/Store";
 
-const selectCounterState = (state: AppState) => state.counter;
+const selectCounterState = (state: RootState) => state.counter;
 
 export const selectCount = createSelector(
     [selectCounterState],
